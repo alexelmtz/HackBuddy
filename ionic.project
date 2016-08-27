@@ -1,4 +1,14 @@
 {
-  "name": "HackMty",
-  "app_id": ""
+  "name": "ionFullApp",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "templatecache",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "documentRoot": "www"
 }
