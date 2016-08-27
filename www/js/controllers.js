@@ -34,7 +34,7 @@ angular.module('your_app_name.controllers', [])
 })
 
 .controller('ProfileCtrl', function($scope) {
-	$scope.image = 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg';
+	$scope.image = 'http://31.media.tumblr.com/cb02cfa5beba93f9b29e4f0a8dce1608/tumblr_no6veeFQuh1uuaq8ao1_1280.gif';
 })
 
 //LOGIN
