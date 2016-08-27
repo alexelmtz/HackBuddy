@@ -48,8 +48,12 @@ angular.module('starter.controllers', [])
     { title: 'Dubstep', id: 3 },
     { title: 'Indie', id: 4 },
     { title: 'Rap', id: 5 },
+    { title: 'Emilio', id: 'emilio' },
     { title: 'Cowbell', id: 6 }
   ];
+})
+.controller('EmilioCtrl', function($scope) {
+  $scope.title = 'emilio';
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {

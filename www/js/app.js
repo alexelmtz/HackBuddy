@@ -58,7 +58,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-
+    .state('app.emilio', {
+      url: '/playlists/emilio',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/emilio.html',
+          controller: 'EmilioCtrl'
+        }
+      }
+    })
   .state('app.single', {
     url: '/playlists/:playlistId',
     views: {
