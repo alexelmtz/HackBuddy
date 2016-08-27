@@ -109,6 +109,20 @@ angular.module('your_app_name', [
     controller: 'ForgotPasswordCtrl'
   })
 
+  .state('brag', {
+    url: "/brag",
+    templateUrl: "views/brag/brag.html",
+    abstract: true,
+    controller: 'BragCtrl'
+  })
+
+  .state('brag.screens', {
+    url: '/screens',
+    templateUrl: "views/brag/screens.html",
+    styleUrls: ['brag/screens.css'],
+    controller: 'ScreensCtrl'
+  })
+
   .state('app', {
     url: "/app",
     abstract: true,

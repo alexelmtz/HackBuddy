@@ -4,6 +4,30 @@ angular.module('your_app_name.controllers', [])
 
 })
 
+//BRAG
+.controller('BragCtrl', function($scope, $ionicConfig) {
+
+})
+
+// APP
+.controller('ScreensCtrl', function($scope, $ionicConfig) {
+	// Called to navigate to the main app
+  $scope.startApp = function() {
+    $state.go('main');
+  };
+  $scope.next = function() {
+    $ionicSlideBoxDelegate.next();
+  };
+  $scope.previous = function() {
+    $ionicSlideBoxDelegate.previous();
+  };
+
+  // Called each time the slide changes
+  $scope.slideChanged = function(index) {
+    $scope.slideIndex = index;
+  };
+})
+
 // APP
 .controller('AppCtrl', function($scope, $ionicConfig) {
 
@@ -16,7 +40,7 @@ angular.module('your_app_name.controllers', [])
 //LOGIN
 .controller('LoginCtrl', function($scope, $state, $templateCache, $q, $rootScope) {
 	$scope.doLogIn = function(){
-		$state.go('app.feeds-categories');
+		$state.go('brag.screens');
 	};
 
 	$scope.user = {};
