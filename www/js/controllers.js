@@ -8,7 +8,7 @@ angular.module('your_app_name.controllers', [])
 .controller('MyCtrl', function($scope, Camera) {
 
    $scope.takePicture = function (options) {
-	
+
       var options = {
          quality : 75,
          targetWidth: 200,
@@ -21,7 +21,7 @@ angular.module('your_app_name.controllers', [])
       }, function(err) {
          console.log(err);
       });
-		
+
    };
 
 })
@@ -69,6 +69,11 @@ angular.module('your_app_name.controllers', [])
   		//$state.go('app.wordpress');
   };
 })
+
+.controller('HackathonsCtrl', function($scope, $ionicConfig) {
+
+})
+
 
 .controller('EventsCtrl', function($scope, $ionicConfig) {
 
@@ -505,7 +510,7 @@ angular.module('your_app_name.controllers', [])
 
 	$scope.doRefresh = function() {
 		$ionicLoading.show({
-			template: 'Loading posts...'
+			template: 'Loading profile...'
 		});
 
 		//Always bring me the latest posts => page=1

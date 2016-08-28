@@ -3,33 +3,20 @@
     <span>Hackathons</span>
   </ion-nav-title>
   <ion-content>
-    <div ng-if="(hackathons.wordpress.length == 0 && hackathons.feeds.length == 0)" class="row hackathons-container">
-      <div class="col col-center">
-        <div class="empty-results">
-          <i class="icon ion-bookmark"></i>
-          <h3 class="no-hackathons">There's nothing here yet. Start exploring!</h3>
-        </div>
+    <h3>hola</h3>
+    <div class="list card">
+      <div class="item item-avatar">
+        <img src="avatar.jpg">
+        <h2>Pretty Hate Machine</h2>
+        <p>Nine Inch Nails</p>
       </div>
+      <div class="item item-image">
+        <img src="cover.jpg">
+      </div>
+      <a class="item item-icon-left assertive" href="#">
+        <i class="icon ion-music-note"></i>
+        Start listening
+      </a>
     </div>
-    <ul ng-if="(hackathons.wordpress.length > 0 || hackathons.feeds.length > 0)" class="hackathons-list">
-      <div ng-if="hackathons.feeds.length > 0" class="item item-divider">
-        Feeds hackathons
-      </div>
-      <li class="bookmark-item" ng-repeat="bookmark in hackathons.feeds">
-        <a ng-click=goToFeedPost(bookmark.link)>
-          <h2 class="post-title" ng-bind-html="bookmark.title | rawHtml"></h2>
-          <p class="post-date">Posted <span class="post-time" am-time-ago="bookmark.date"></span></p>
-        </a>
-      </li>
-      <div ng-if="hackathons.wordpress.length > 0" class="item item-divider">
-        Wordpress hackathons
-      </div>
-      <li class="bookmark-item" ng-repeat="bookmark in hackathons.wordpress">
-        <a ng-click=goToWordpressPost(bookmark.id)>
-          <h2 class="post-title" ng-bind-html="bookmark.title | rawHtml"></h2>
-          <p class="post-date">Posted <span class="post-time" am-time-ago="bookmark.date"></span></p>
-        </a>
-      </li>
-    </ul>
   </ion-content>
 </ion-view>
