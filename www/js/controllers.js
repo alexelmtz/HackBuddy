@@ -78,7 +78,8 @@ angular.module('your_app_name.controllers', [])
 	success(function(data) {
 		console.log("Data: " + JSON.stringify(data));
 
-	    $scope.greeting = data;
+	    $scope.greeting = data.splice(0, '5');;
+      //console.log(greeting[0]["name"])
 	});
 
 })
