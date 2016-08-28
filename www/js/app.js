@@ -123,6 +123,19 @@ angular.module('your_app_name', [
     controller: 'ScreensCtrl'
   })
 
+  .state('hackathon', {
+    url: "/hackathon",
+    abstract: true,
+    templateUrl: "views/hackathon/side-menu.html",
+    controller: 'HackCtrl'
+  })
+
+  .state('hackathon.main', {
+    url: '/main',
+    templateUrl: "views/hackathon/main.html",
+    controller: 'MainCtrl'
+  })
+
   .state('app', {
     url: "/app",
     abstract: true,
@@ -279,36 +292,7 @@ angular.module('your_app_name', [
         controller: "ProfileCtrl"
       }
     }
-  })
-
-  .state('app.hackathons', {
-    url: "/hackathons",
-    views: {
-      'menuContent': {
-        templateUrl: "views/app/hackathons.html",
-        controller: 'hackathonsCtrl'
-      }
-    }
-  })
-
-  .state('hackathon', {
-    url: "/hackathon",
-    abstract: true,
-    templateUrl: "views/hackathon/side-menu.html",
-    controller: 'HackCtrl'
-  })
-
-  .state('hackathon.happeningNow', {
-    url: "/happeningNow",
-    views: {
-      'menuContent': {
-        templateUrl: "views/hackathon/happeningNow.html",
-        controller: 'WordpressCtrl'
-      }
-    }
-  })
-
-;
+  });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/auth/walkthrough');

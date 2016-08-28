@@ -29,8 +29,62 @@ angular.module('your_app_name.controllers', [])
 })
 
 // APP
-.controller('AppCtrl', function($scope, $ionicConfig) {
+.controller('AppCtrl', function($scope, $ionicConfig, $state) {
+  $scope.goHack = function(){
+  		$state.go('hackathon.main');
+  };
+})
 
+// HACKATHON
+.controller('HackCtrl', function($scope, $ionicConfig) {
+
+})
+
+.controller('MainCtrl', function($scope, $http, $ionicLoading, PostService, hackathonservice) {
+	$scope.posts = [];
+	$scope.page = 1;
+	$scope.totalPages = 1;
+
+	$scope.doRefresh = function() {
+		$ionicLoading.show({
+			template: 'Loading posts...'
+		});
+
+		//Always bring me the latest posts => page=1
+		PostService.getRecentPosts(1)
+		.then(function(data){
+			$scope.totalPages = data.pages;
+			$scope.posts = PostService.shortenPosts(data.posts);
+
+			$ionicLoading.hide();
+			$scope.$broadcast('scroll.refreshComplete');
+		});
+	};
+
+	$scope.loadMoreData = function(){
+		$scope.page += 1;
+
+		PostService.getRecentPosts($scope.page)
+		.then(function(data){
+			//We will update this value in every request because new posts can be created
+			$scope.totalPages = data.pages;
+			var new_posts = PostService.shortenPosts(data.posts);
+			$scope.posts = $scope.posts.concat(new_posts);
+
+			$scope.$broadcast('scroll.infiniteScrollComplete');
+		});
+	};
+
+	$scope.moreDataCanBeLoaded = function(){
+		return $scope.totalPages > $scope.page;
+	};
+
+	$scope.bookmarkPost = function(post){
+		$ionicLoading.show({ template: 'Post Saved!', noBackdrop: true, duration: 1000 });
+		hackathonservice.bookmarkWordpressPost(post);
+	};
+
+	$scope.doRefresh();
 })
 
 .controller('HackCtrl', function($scope, $ionicConfig) {
