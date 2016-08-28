@@ -72,7 +72,14 @@ angular.module('your_app_name.controllers', [])
 
 })
 
-.controller('HackathonsCtrl', function($scope, $ionicConfig) {
+.controller('HackathonsCtrl', function($http, $scope, $ionicConfig) {
+
+	$http.get('/api/mlh/events.json?api_key=094il5f2a9jeckt68qtdmtp9jcra8abr').
+	success(function(data) {
+		console.log("Data: " + JSON.stringify(data));
+
+	    $scope.greeting = data;
+	});
 
 })
 

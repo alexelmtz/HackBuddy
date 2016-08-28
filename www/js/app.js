@@ -135,7 +135,7 @@ angular.module('your_app_name', [
     views: {
       'menuContent': {
         templateUrl: "views/app/hackathons.html",
-        controller: 'MainCtrl'
+        controller: 'HackathonsCtrl'
       }
     }
   })
