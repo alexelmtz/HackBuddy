@@ -3,7 +3,7 @@
 		"id":"news",
 		"title":"News",
 		"secondTitle":"Web Development",
-		"image":"img/feeds/news.jpg",
+		"image":"img/feeds/webdev.jpg",
 		"feed_sources":[
 			{
 				"id":"bbc",
@@ -39,7 +39,7 @@
 		"id":"sports",
 		"title":"Sports",
 		"secondTitle":"Mobile Development",
-		"image":"img/feeds/sports.jpg",
+		"image":"img/feeds/mobile.jpg",
 		"feed_sources":[
 			{
 				"id":"the-guardian",
