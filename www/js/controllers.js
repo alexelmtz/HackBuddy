@@ -177,7 +177,7 @@ angular.module('your_app_name.controllers', [])
 
 	$scope.user = {};
 
-	$scope.user.email = "john@doe.com";
+	$scope.user.email = "hectormgdev@gmail.com";
 	$scope.user.pin = "12345";
 
 	// We need this for the form validation
@@ -192,7 +192,7 @@ angular.module('your_app_name.controllers', [])
 .controller('SignupCtrl', function($scope, $state) {
 	$scope.user = {};
 
-	$scope.user.email = "john@doe.com";
+	$scope.user.email = "hectormgdev@gmail.com";
 
 	$scope.doSignUp = function(){
 		$state.go('app.feeds-categories');

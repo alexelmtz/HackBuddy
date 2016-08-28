@@ -1,3 +1,17 @@
+.myLabel {
+    border: 2px solid #AAA;
+    border-radius: 4px;
+    padding: 2px 5px;
+    margin: 2px;
+    background: #DDD;
+    display: inline-block;
+    width: 90%;
+    align: center;
+}
+
+.bottom-content {
+	text-align: center;
+}
 #table-body {
 	border: 1px solid black;
 	width : 100%;
