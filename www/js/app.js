@@ -123,6 +123,19 @@ angular.module('your_app_name', [
     controller: 'ScreensCtrl'
   })
 
+  .state('hackathon', {
+    url: "/hackathon",
+    abstract: true,
+    templateUrl: "views/hackathon/side-menu.html",
+    controller: 'HackCtrl'
+  })
+
+  .state('hackathon.main', {
+    url: '/main',
+    templateUrl: "views/hackathon/main.html",
+    controller: 'MainCtrl'
+  })
+
   .state('app', {
     url: "/app",
     abstract: true,
