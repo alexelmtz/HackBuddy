@@ -248,7 +248,7 @@ angular.module('your_app_name.controllers', [])
 
 	$http.get('feeds-categories.json').success(function(response) {
 		var category = _.find(response, {id: $scope.categoryId});
-		$scope.categoryTitle = category.title;
+		$scope.categoryTitle = category.secondTitle;
 		$scope.category_sources = category.feed_sources;
 	});
 })
