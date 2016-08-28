@@ -52,14 +52,54 @@ angular.module('your_app_name.controllers', [])
 
 // APP
 .controller('AppCtrl', function($scope, $ionicConfig, $state) {
+
+  $scope.nombre = "Profile";
+  $scope.hackathon = true;
+
   $scope.goHack = function(){
-  		$state.go('hackathon.main');
+    if ($scope.hackathon) {
+      $scope.hackathon = false;
+      $scope.nombre = "Happening now";
+    } else {
+      $scope.nombre = "Profile";
+      $scope.hackathon = true;
+    }
+
+
+  		//$state.go('app.wordpress');
   };
 })
 
-// HACKATHON
-.controller('HackCtrl', function($scope, $ionicConfig) {
+.controller('EventsCtrl', function($scope, $ionicConfig) {
 
+})
+
+.controller('WorkshopsCtrl', function($scope, $ionicConfig) {
+
+})
+
+.controller('ResourcesCtrl', function($scope, $ionicConfig) {
+
+})
+
+.controller('ForumCtrl', function($scope, $ionicConfig) {
+
+})
+
+
+
+
+//bring specific category providers
+.controller('CategoryFeedsCtrl', function($scope, $http, $stateParams) {
+	$scope.category_sources = [];
+
+	$scope.categoryId = $stateParams.categoryId;
+
+	$http.get('feeds-categories.json').success(function(response) {
+		var category = _.find(response, {id: $scope.categoryId});
+		$scope.categoryTitle = category.secondTitle;
+		$scope.category_sources = category.feed_sources;
+	});
 })
 
 .controller('MainCtrl', function($scope, $http, $ionicLoading, PostService, hackathonservice) {
@@ -68,9 +108,7 @@ angular.module('your_app_name.controllers', [])
 	$scope.totalPages = 1;
 
 	$scope.doRefresh = function() {
-		$ionicLoading.show({
-			template: 'Loading posts...'
-		});
+
 
 		//Always bring me the latest posts => page=1
 		PostService.getRecentPosts(1)
@@ -107,14 +145,6 @@ angular.module('your_app_name.controllers', [])
 	};
 
 	$scope.doRefresh();
-})
-
-.controller('HackCtrl', function($scope, $ionicConfig) {
-
-})
-
-.controller('HappeningCtrl', function($scope, $ionicConfig) {
-
 })
 
 .controller('ProfileCtrl', function($scope) {
@@ -217,10 +247,6 @@ angular.module('your_app_name.controllers', [])
 	$scope.centerOnMe= function(){
 
 		$scope.positions = [];
-
-		$ionicLoading.show({
-			template: 'Loading...'
-		});
 
 		// with this function you can get the user’s current position
 		// we use this plugin: https://github.com/apache/cordova-plugin-geolocation/
@@ -470,27 +496,9 @@ angular.module('your_app_name.controllers', [])
 	};
 })
 
-
-// hackathons
-.controller('hackathonsCtrl', function($scope, $rootScope, hackathonservice, $state) {
-
-	$scope.hackathons = hackathonservice.gethackathons();
-
-	// When a new post is bookmarked, we should update hackathons list
-	$rootScope.$on("new-bookmark", function(event){
-		$scope.hackathons = hackathonservice.gethackathons();
-	});
-
-	$scope.goToFeedPost = function(link){
-		window.open(link, '_blank', 'location=yes');
-	};
-	$scope.goToWordpressPost = function(postId){
-		$state.go('app.post', {postId: postId});
-	};
-})
-
 // WORDPRESS
 .controller('WordpressCtrl', function($scope, $http, $ionicLoading, PostService, hackathonservice) {
+  $scope.image = 'http://31.media.tumblr.com/cb02cfa5beba93f9b29e4f0a8dce1608/tumblr_no6veeFQuh1uuaq8ao1_1280.gif';
 	$scope.posts = [];
 	$scope.page = 1;
 	$scope.totalPages = 1;

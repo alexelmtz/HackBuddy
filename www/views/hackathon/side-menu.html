@@ -23,20 +23,24 @@
           <h2 class="greeting">Hi Pepe Ramirez</h2>
           <p class="message">Welcome back</p>
         </ion-item>
-        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.hackathons">
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="hackathon.hackathons">
           <i class="icon ion-bookmark"></i>
           <h2 class="menu-text">Hackathons</h2>
         </ion-item>
-        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.feeds-categories">
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="hackathon.feeds-categories">
           <i class="icon ion-radio-waves"></i>
           <h2 class="menu-text">Resources</h2>
         </ion-item>
-        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.settings">
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="hackathon.events">
+          <i class="icon ion-radio-waves"></i>
+          <h2 class="menu-text">Events</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="hackathon.settings">
           <i class="icon ion-social-wordpress"></i>
           <h2 class="menu-text">Settings</h2>
         </ion-item>
-        <!--
-        <ion-item class="item-icon-left" nav-clear menu-close>
+
+        <ion-item class="item-icon-left" nav-clear menu-close ng-hide="hackathon"> 
           <i class="icon ion-social-wordpress"></i>
           <h2 class="menu-text">NOT USED...</h2>
         </ion-item>
@@ -56,7 +60,7 @@
           <i class="icon ion-gear-a"></i>
           <h2 class="menu-text">Wordpress</h2>
         </ion-item>
-        -->
+
     </ion-list>
     </ion-content>
   </ion-side-menu>

@@ -123,25 +123,23 @@ angular.module('your_app_name', [
     controller: 'ScreensCtrl'
   })
 
-  .state('hackathon', {
-    url: "/hackathon",
-    abstract: true,
-    templateUrl: "views/hackathon/side-menu.html",
-    controller: 'HackCtrl'
-  })
-
-  .state('hackathon.main', {
-    url: '/main',
-    templateUrl: "views/hackathon/main.html",
-    controller: 'MainCtrl'
-  })
-
   .state('app', {
     url: "/app",
     abstract: true,
     templateUrl: "views/app/side-menu.html",
     controller: 'AppCtrl'
   })
+
+  .state('app.hackathons', {
+    url: "/hackathons",
+    views: {
+      'menuContent': {
+        templateUrl: "views/app/hackathons.html",
+        controller: 'MainCtrl'
+      }
+    }
+  })
+
 
   //MISCELLANEOUS
   .state('app.miscellaneous', {
@@ -254,9 +252,7 @@ angular.module('your_app_name', [
     },
     resolve: {
       post_data: function(PostService, $ionicLoading, $stateParams) {
-        $ionicLoading.show({
-      		template: 'Loading post ...'
-      	});
+
 
         var postId = $stateParams.postId;
         return PostService.getPost(postId);
@@ -289,10 +285,38 @@ angular.module('your_app_name', [
     views: {
       'menuContent': {
         templateUrl: "views/app/profile.html",
-        controller: "ProfileCtrl"
+        controller: "WordpressCtrl"
       }
     }
-  });
+  })
+  .state('app.workshops', {
+    url: "/workshops",
+    views: {
+      'menuContent': {
+        templateUrl: "views/app/workshops.html",
+        controller: "WorkshopsCtrl"
+      }
+    }
+  })
+  .state('app.events', {
+    url: "/events",
+    views: {
+      'menuContent': {
+        templateUrl: "views/app/events.html",
+        controller: "EventsCtrl"
+      }
+    }
+  })
+  .state('app.forum', {
+    url: "/forum",
+    views: {
+      'menuContent': {
+        templateUrl: "views/app/forms.html",
+        controller: "ForumCtrl"
+      }
+    }
+  })
+;
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/auth/walkthrough');
