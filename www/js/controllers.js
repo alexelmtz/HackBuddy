@@ -106,6 +106,10 @@ angular.module('your_app_name.controllers', [])
 
 //bring specific category providers
 .controller('CategoryFeedsCtrl', function($scope, $http, $stateParams) {
+  $scope.openExternal = function($event){
+  if ($event.currentTarget && $event.currentTarget.attributes['data-external'])
+  window.open($event.currentTarget.attributes['data-external'], '_system', 'location=yes');
+}
 	$scope.category_sources = [];
 
 	$scope.categoryId = $stateParams.categoryId;
