@@ -320,8 +320,8 @@
 .ion-ios-bolt-outline:before,
 .ion-ios-book:before,
 .ion-ios-book-outline:before,
-.ion-ios-bookmarks:before,
-.ion-ios-bookmarks-outline:before,
+.ion-ios-hackathons:before,
+.ion-ios-hackathons-outline:before,
 .ion-ios-box:before,
 .ion-ios-box-outline:before,
 .ion-ios-briefcase:before,
@@ -1643,10 +1643,10 @@
 .ion-ios-book-outline:before {
   content: ""; }
 
-.ion-ios-bookmarks:before {
+.ion-ios-hackathons:before {
   content: ""; }
 
-.ion-ios-bookmarks-outline:before {
+.ion-ios-hackathons-outline:before {
   content: ""; }
 
 .ion-ios-box:before {
