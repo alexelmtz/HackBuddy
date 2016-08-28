@@ -168,6 +168,29 @@ angular.module('your_app_name.controllers', [])
 
 //LOGIN
 .controller('LoginCtrl', function($scope, $state, $templateCache, $q, $rootScope) {
+  /*
+  FB.init({
+      appId      : '184156038672165',
+      xfbml      : true,
+      version    : 'v2.7'
+  });
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+   */
+
+  $scope.fbLogin = function(){
+    FB.login(function(response){
+      // Handle the response object, like in statusChangeCallback() in our demo
+      // code.
+    });
+  }
+
 	$scope.doLogIn = function(){
 		$state.go('brag.screens');
 	};

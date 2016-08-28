@@ -17,6 +17,7 @@
               </my-tab>
             </my-tabs>
             <div class="item item-body bottom-content">
+              <button class="button button-calm button-block" ng-click="fbLogin()">Login with Facebook</button>
               <button type="submit" class="button button-positive button-block" ng-click="doLogIn()" ng-disabled="(selected_tab=='Email') ? (login_form.user_email.$invalid || login_form.user_password.$invalid) : ((selected_tab=='Phone') ? (login_form.user_phone.$invalid || login_form.user_pin.$invalid) : false)">
                 Log In
               </button>
@@ -33,5 +34,25 @@
         </div>
       </div>
     </div>
+    <!--
+    <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '184156038672165',
+        xfbml      : true,
+        version    : 'v2.7'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+
+  </script>
+-->
   </ion-content>
 </ion-view>

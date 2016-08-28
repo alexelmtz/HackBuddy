@@ -4,19 +4,19 @@
 	</ion-nav-bar>
   <ion-slide-box on-slide-changed="slideChanged(index)">
     <ion-slide>
-      <h3>Thank you for choosing the Awesome App!</h3>
+      <h3>Thank you for choosing the HackBuddy!</h3>
       <div id="logo">
-        <img src="http://code.ionicframework.com/assets/img/app_icon.png">
+        <img src="img/icondog.png" style="max-width:200px;max-height:200px">
       </div>
       <p>
         We've worked super hard to make you happy.
       </p>
       <p>
-        But if you are angry, too bad.
+        But if you are confused, stop being confused!.
       </p>
     </ion-slide>
     <ion-slide>
-      <h3>Using Awesome</h3>
+      <h3>Using HackBuddy</h3>
 
       <div id="list">
         <h5>Just three steps:</h5>
@@ -30,9 +30,14 @@
     <ion-slide>
       <h3>Any questions?</h3>
       <p>
-        Too bad!
+        Contact us!
       </p>
-			<a href="/#/app/profile">Start using HackBuddy!</a>
+
+			<a href="/#/app/profile">
+				<button type="submit" class="button button-positive button-block" ng-click="doLogIn()" ng-disabled="(selected_tab=='Email') ? (login_form.user_email.$invalid || login_form.user_password.$invalid) : ((selected_tab=='Phone') ? (login_form.user_phone.$invalid || login_form.user_pin.$invalid) : false)">
+					Start using HackBuddy!
+				</button>
+			</a>
     </ion-slide>
   </ion-slide-box>
 </ion-view>
