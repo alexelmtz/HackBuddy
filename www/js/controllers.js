@@ -53,6 +53,7 @@ angular.module('your_app_name.controllers', [])
 // APP
 .controller('AppCtrl', function($scope, $ionicConfig, $state) {
 
+
   $scope.nombre = "Profile";
   $scope.hackathon = true;
 
@@ -68,6 +69,7 @@ angular.module('your_app_name.controllers', [])
 
   		//$state.go('app.wordpress');
   };
+
 })
 
 .controller('HackathonsCtrl', function($scope, $ionicConfig) {
