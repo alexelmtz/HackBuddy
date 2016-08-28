@@ -1,3 +1,9 @@
+.user-skills {
+	display: inline-block;
+	width: 33%;
+	background-color: red;
+}
+
 .slider {
   height: 100%;
 }
