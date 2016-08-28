@@ -320,8 +320,8 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .ion-ios-bolt-outline:before,
 .ion-ios-book:before,
 .ion-ios-book-outline:before,
-.ion-ios-bookmarks:before,
-.ion-ios-bookmarks-outline:before,
+.ion-ios-hackathons:before,
+.ion-ios-hackathons-outline:before,
 .ion-ios-box:before,
 .ion-ios-box-outline:before,
 .ion-ios-briefcase:before,
@@ -1643,10 +1643,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .ion-ios-book-outline:before {
   content: ""; }
 
-.ion-ios-bookmarks:before {
+.ion-ios-hackathons:before {
   content: ""; }
 
-.ion-ios-bookmarks-outline:before {
+.ion-ios-hackathons-outline:before {
   content: ""; }
 
 .ion-ios-box:before {
@@ -10053,43 +10053,43 @@ ion-side-menu .heading-item .message {
       margin: 6px 30px;
       padding: 6px 0px; }
 
-.bookmarks-view {
+.hackathons-view {
   background-color: #EAEAEA; }
-  .bookmarks-view .scroll-content .scroll,
-  .bookmarks-view .bookmarks-container {
+  .hackathons-view .scroll-content .scroll,
+  .hackathons-view .hackathons-container {
     height: 100%; }
-  .bookmarks-view .empty-results {
+  .hackathons-view .empty-results {
     text-align: center; }
-    .bookmarks-view .empty-results .icon {
+    .hackathons-view .empty-results .icon {
       font-size: 170px;
       color: white; }
-    .bookmarks-view .empty-results .no-bookmarks {
+    .hackathons-view .empty-results .no-hackathons {
       color: #d1d1d1;
       font-size: 22px; }
-  .bookmarks-view .bookmarks-list {
+  .hackathons-view .hackathons-list {
     overflow-y: scroll;
     height: 100%; }
-  .bookmarks-view .bookmarks-list::-webkit-scrollbar {
+  .hackathons-view .hackathons-list::-webkit-scrollbar {
     display: none !important;
     width: 0 !important; }
-  .bookmarks-view .bookmark-item {
+  .hackathons-view .bookmark-item {
     padding: 10px 0px;
     border-bottom: 1px solid rgba(30, 30, 30, 0.2);
     margin: 0px 16px; }
-    .bookmarks-view .bookmark-item * {
+    .hackathons-view .bookmark-item * {
       text-decoration: none;
       color: #444444; }
-    .bookmarks-view .bookmark-item .post-title {
+    .hackathons-view .bookmark-item .post-title {
       margin: 0px;
       font-size: 20px;
       font-weight: 300;
       letter-spacing: -1px; }
-    .bookmarks-view .bookmark-item .post-date {
+    .hackathons-view .bookmark-item .post-date {
       margin: 0px;
       font-size: 12px;
       font-weight: 200;
       color: rgba(94, 94, 94, 0.7); }
-    .bookmarks-view .bookmark-item .post-time {
+    .hackathons-view .bookmark-item .post-time {
       color: rgba(43, 43, 43, 0.9); }
 
 .category-feeds-view {

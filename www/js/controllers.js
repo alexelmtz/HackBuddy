@@ -254,7 +254,7 @@ angular.module('your_app_name.controllers', [])
 })
 
 //this method brings posts for a source provider
-.controller('FeedEntriesCtrl', function($scope, $stateParams, $http, FeedList, $q, $ionicLoading, BookMarkService) {
+.controller('FeedEntriesCtrl', function($scope, $stateParams, $http, FeedList, $q, $ionicLoading, hackathonservice) {
 	$scope.feed = [];
 
 	var categoryId = $stateParams.categoryId,
@@ -289,7 +289,7 @@ angular.module('your_app_name.controllers', [])
 
 	$scope.bookmarkPost = function(post){
 		$ionicLoading.show({ template: 'Post Saved!', noBackdrop: true, duration: 1000 });
-		BookMarkService.bookmarkFeedPost(post);
+		hackathonservice.bookmarkFeedPost(post);
 	};
 })
 
@@ -387,14 +387,14 @@ angular.module('your_app_name.controllers', [])
 })
 
 
-// BOOKMARKS
-.controller('BookMarksCtrl', function($scope, $rootScope, BookMarkService, $state) {
+// hackathons
+.controller('hackathonsCtrl', function($scope, $rootScope, hackathonservice, $state) {
 
-	$scope.bookmarks = BookMarkService.getBookmarks();
+	$scope.hackathons = hackathonservice.gethackathons();
 
-	// When a new post is bookmarked, we should update bookmarks list
+	// When a new post is bookmarked, we should update hackathons list
 	$rootScope.$on("new-bookmark", function(event){
-		$scope.bookmarks = BookMarkService.getBookmarks();
+		$scope.hackathons = hackathonservice.gethackathons();
 	});
 
 	$scope.goToFeedPost = function(link){
@@ -406,7 +406,7 @@ angular.module('your_app_name.controllers', [])
 })
 
 // WORDPRESS
-.controller('WordpressCtrl', function($scope, $http, $ionicLoading, PostService, BookMarkService) {
+.controller('WordpressCtrl', function($scope, $http, $ionicLoading, PostService, hackathonservice) {
 	$scope.posts = [];
 	$scope.page = 1;
 	$scope.totalPages = 1;
@@ -447,7 +447,7 @@ angular.module('your_app_name.controllers', [])
 
 	$scope.bookmarkPost = function(post){
 		$ionicLoading.show({ template: 'Post Saved!', noBackdrop: true, duration: 1000 });
-		BookMarkService.bookmarkWordpressPost(post);
+		hackathonservice.bookmarkWordpressPost(post);
 	};
 
 	$scope.doRefresh();

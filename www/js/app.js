@@ -281,12 +281,12 @@ angular.module('your_app_name', [
     }
   })
 
-  .state('app.bookmarks', {
-    url: "/bookmarks",
+  .state('app.hackathons', {
+    url: "/hackathons",
     views: {
       'menuContent': {
-        templateUrl: "views/app/bookmarks.html",
-        controller: 'BookMarksCtrl'
+        templateUrl: "views/app/hackathons.html",
+        controller: 'hackathonsCtrl'
       }
     }
   })

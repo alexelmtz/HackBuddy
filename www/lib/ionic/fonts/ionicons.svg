@@ -796,10 +796,10 @@ d="M284 384c55 0 100 -26 100 -79v-1v-4v-261v-17h-6h-11h-5c-17 30 -44 42 -78 42c-
 c-1 43 -39 62 -84 62c-44 0 -81 -19 -84 -61v-1v0v-262h1c19 26 48 36 83 36s66 -17 84 -43zM368 300v14v1c-3 42 -40 53 -84 53c-46 0 -84 -20 -84 -64v-1v-266c18 26 49 43 84 43s66 -10 84 -36v256z" />
     <glyph glyph-name="ion-ios-book" unicode="&#xf3e8;" horiz-adv-x="384" 
 d="M100 384c35 0 67 -10 84 -31v-353h-2c-8 36 -42 64 -82 64c-34 0 -65 -16 -78 -42h-5h-11h-6v9v264v9v1c0 53 45 79 100 79zM284 384c55 0 100 -26 100 -79v-1v-4v-261v-17h-6h-11h-5c-17 30 -44 42 -78 42c-40 0 -74 -28 -82 -64h-2v353c17 21 50 31 84 31z" />
-    <glyph glyph-name="ion-ios-bookmarks-outline" unicode="&#xf3e9;" horiz-adv-x="418" 
+    <glyph glyph-name="ion-ios-hackathons-outline" unicode="&#xf3e9;" horiz-adv-x="418" 
 d="M385 384c19 0 33 -13 33 -32v-286c0 -19 -14 -34 -33 -34h-143s-25 -4 -25 -19v-13h-8h-8v13c0 15 -11 19 -25 19h-143c-19 0 -33 15 -33 34v286c0 19 14 32 33 32h150c10 0 20 -5 26 -12v0v0c6 7 16 12 26 12h150zM201 37v309c0 9 -12 22 -25 22h-143
 c-9 0 -16 -7 -16 -16v-286c0 -9 7 -18 16 -18h144c10 0 19 -3 24 -11zM273 368v-100l23 14l9 6l9 -6l23 -14v100h-64zM401 66v286c0 9 -7 16 -16 16h-32v-131l-48 32l-48 -32v131h-15c-13 0 -25 -13 -25 -22v-309c5 9 14 11 24 11h144c9 0 16 9 16 18z" />
-    <glyph glyph-name="ion-ios-bookmarks" unicode="&#xf3ea;" horiz-adv-x="418" 
+    <glyph glyph-name="ion-ios-hackathons" unicode="&#xf3ea;" horiz-adv-x="418" 
 d="M296 283l-23 -15v116h64v-116l-23 15l-9 6zM385 384c19 0 33 -13 33 -32v-286c0 -19 -14 -34 -33 -34h-143s-25 -4 -25 -19v-13h-8h-8v13c0 15 -11 19 -25 19h-143c-19 0 -33 15 -33 34v286c0 19 14 32 33 32h150s18 -8 18 -15v-329l8 -6l8 6v329s10 15 18 15h22v-146
 l48 32l48 -32v146h32z" />
     <glyph glyph-name="ion-ios-box-outline" unicode="&#xf3eb;" horiz-adv-x="320" 

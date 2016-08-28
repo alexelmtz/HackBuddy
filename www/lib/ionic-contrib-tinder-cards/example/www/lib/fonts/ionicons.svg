@@ -669,10 +669,10 @@ d="M318 222c0 -114 28 -126 66 -158h-384c38 32 66 44 66 158c0 98 53 130 102 138v2
 d="M131 316l-100 -140h65h19l-3 -19l-17 -89l100 140h-65h-19l3 19zM160 384v0l-30 -160h96l-160 -224l30 160h-96z" />
     <glyph glyph-name="ion-ios7-bolt" unicode="&#xf15b;" horiz-adv-x="226" 
 d="M160 384v0l-30 -160h96l-160 -224l30 160h-96z" />
-    <glyph glyph-name="ion-ios7-bookmarks-outline" unicode="&#xf15c;" horiz-adv-x="418" 
+    <glyph glyph-name="ion-ios7-hackathons-outline" unicode="&#xf15c;" horiz-adv-x="418" 
 d="M385 384c19 0 33 -13 33 -32v-286c0 -19 -14 -34 -33 -34h-143s-25 -4 -25 -19v-13h-8h-8v13c0 15 -11 19 -25 19h-143c-19 0 -33 15 -33 34v286c0 19 14 32 33 32h150c10 0 20 -5 26 -12v0v0c6 7 16 12 26 12h150zM201 37v309c0 9 -12 22 -25 22h-143
 c-9 0 -16 -7 -16 -16v-286c0 -9 7 -18 16 -18h144c10 0 19 -3 24 -11zM273 368v-100l23 14l9 6l9 -6l23 -14v100h-64zM401 66v286c0 9 -7 16 -16 16h-32v-131l-48 32l-48 -32v131h-15c-13 0 -25 -13 -25 -22v-309c5 9 14 11 24 11h144c9 0 16 9 16 18z" />
-    <glyph glyph-name="ion-ios7-bookmarks" unicode="&#xf15d;" horiz-adv-x="418" 
+    <glyph glyph-name="ion-ios7-hackathons" unicode="&#xf15d;" horiz-adv-x="418" 
 d="M296 283l-23 -15v116h64v-116l-23 15l-9 6zM385 384c19 0 33 -13 33 -32v-286c0 -19 -14 -34 -33 -34h-143s-25 -4 -25 -19v-13h-8h-8v13c0 15 -11 19 -25 19h-143c-19 0 -33 15 -33 34v286c0 19 14 32 33 32h150s18 -8 18 -15v-329l8 -6l8 6v329s10 15 18 15h22v-146
 l48 32l48 -32v146h32z" />
     <glyph glyph-name="ion-ios7-box-outline" unicode="&#xf15e;" horiz-adv-x="320" 

@@ -109,20 +109,20 @@ angular.module('your_app_name.services', [])
 })
 
 
-// BOOKMARKS FUNCTIONS
-.service('BookMarkService', function (_, $rootScope){
+// hackathons FUNCTIONS
+.service('hackathonservice', function (_, $rootScope){
 
 	this.bookmarkFeedPost = function(bookmark_post){
 
-		var user_bookmarks = !_.isUndefined(window.localStorage.ionFullApp_feed_bookmarks) ?
-														JSON.parse(window.localStorage.ionFullApp_feed_bookmarks) : [];
+		var user_hackathons = !_.isUndefined(window.localStorage.ionFullApp_feed_hackathons) ?
+														JSON.parse(window.localStorage.ionFullApp_feed_hackathons) : [];
 
 		//check if this post is already saved
 
-		var existing_post = _.find(user_bookmarks, function(post){ return post.link == bookmark_post.link; });
+		var existing_post = _.find(user_hackathons, function(post){ return post.link == bookmark_post.link; });
 
 		if(!existing_post){
-			user_bookmarks.push({
+			user_hackathons.push({
 				link: bookmark_post.link,
 				title : bookmark_post.title,
 				date: bookmark_post.publishedDate,
@@ -130,21 +130,21 @@ angular.module('your_app_name.services', [])
 			});
 		}
 
-		window.localStorage.ionFullApp_feed_bookmarks = JSON.stringify(user_bookmarks);
+		window.localStorage.ionFullApp_feed_hackathons = JSON.stringify(user_hackathons);
 		$rootScope.$broadcast("new-bookmark");
 	};
 
 	this.bookmarkWordpressPost = function(bookmark_post){
 
-		var user_bookmarks = !_.isUndefined(window.localStorage.ionFullApp_wordpress_bookmarks) ?
-														JSON.parse(window.localStorage.ionFullApp_wordpress_bookmarks) : [];
+		var user_hackathons = !_.isUndefined(window.localStorage.ionFullApp_wordpress_hackathons) ?
+														JSON.parse(window.localStorage.ionFullApp_wordpress_hackathons) : [];
 
 		//check if this post is already saved
 
-		var existing_post = _.find(user_bookmarks, function(post){ return post.id == bookmark_post.id; });
+		var existing_post = _.find(user_hackathons, function(post){ return post.id == bookmark_post.id; });
 
 		if(!existing_post){
-			user_bookmarks.push({
+			user_hackathons.push({
 				id: bookmark_post.id,
 				title : bookmark_post.title,
 				date: bookmark_post.date,
@@ -152,14 +152,14 @@ angular.module('your_app_name.services', [])
 			});
 		}
 
-		window.localStorage.ionFullApp_wordpress_bookmarks = JSON.stringify(user_bookmarks);
+		window.localStorage.ionFullApp_wordpress_hackathons = JSON.stringify(user_hackathons);
 		$rootScope.$broadcast("new-bookmark");
 	};
 
-	this.getBookmarks = function(){
+	this.gethackathons = function(){
 		return {
-			feeds : JSON.parse(window.localStorage.ionFullApp_feed_bookmarks || '[]'),
-			wordpress: JSON.parse(window.localStorage.ionFullApp_wordpress_bookmarks || '[]')
+			feeds : JSON.parse(window.localStorage.ionFullApp_feed_hackathons || '[]'),
+			wordpress: JSON.parse(window.localStorage.ionFullApp_wordpress_hackathons || '[]')
 		};
 	};
 })

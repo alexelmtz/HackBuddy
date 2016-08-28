@@ -1,9 +1,9 @@
-.bookmarks-view
+.hackathons-view
 {
   background-color: $content-bg;
 
   .scroll-content .scroll,
-  .bookmarks-container
+  .hackathons-container
   {
     height: 100%;
   }
@@ -18,7 +18,7 @@
       color: lighten($content-bg, 10);
     }
 
-    .no-bookmarks
+    .no-hackathons
     {
       color: darken($content-bg, 10);
       font-size: 22px;
@@ -26,14 +26,14 @@
   }
 
 
-  .bookmarks-list
+  .hackathons-list
   {
     overflow-y: scroll;
     height: 100%;
   }
 
   // Fix scrollbar style introduced on ionic v1rc1
-  .bookmarks-list::-webkit-scrollbar
+  .hackathons-list::-webkit-scrollbar
   {
     display: none !important;
     width: 0 !important;
