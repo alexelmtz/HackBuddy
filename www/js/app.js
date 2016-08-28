@@ -304,6 +304,23 @@ angular.module('your_app_name', [
     }
   })
 
+  .state('hackathon', {
+    url: "/hackathon",
+    abstract: true,
+    templateUrl: "views/hackathon/side-menu.html",
+    controller: 'HackCtrl'
+  })
+
+  .state('hackathon.happeningNow', {
+    url: "/happeningNow",
+    views: {
+      'menuContent': {
+        templateUrl: "views/hackathon/happeningNow.html",
+        controller: 'WordpressCtrl'
+      }
+    }
+  })
+
 ;
 
   // if none of the above states are matched, use this as the fallback
